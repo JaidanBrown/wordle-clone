@@ -1,10 +1,10 @@
 import React from 'react'
-import './App.css'
+import './sass/main.scss'
 import Board from './components/Board'
 
 function App() {
 	return (
-		<div className='App'>
+		<div className='container'>
 			<Board />
 		</div>
 	)
