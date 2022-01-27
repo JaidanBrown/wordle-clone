@@ -31,6 +31,7 @@ const BoardNew = () => {
 		if (e.key === 'Enter') {
 			if (x < GUESSES - 1) {
 				if (e.target.id.slice(-1) == 4 && rowInput.length === WORD_LENGTH) {
+					checkLetters(rowInput)
 					setTurn(turn + 1)
 					setRowInput([])
 					setTimeout(() => {
@@ -43,7 +44,17 @@ const BoardNew = () => {
 		}
 	}
 
-	const checkLetters = (letters) => {}
+	const findCommon = (arr1, arr2) => {
+		return arr1.some((item) => arr2.includes(item))
+	}
+
+	const checkLetters = (letters) => {
+		console.log(letters)
+		console.log(splitAnswer)
+		if (letters == splitAnswer) {
+			console.log('Winner')
+		}
+	}
 
 	return (
 		<div className='board'>
