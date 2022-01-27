@@ -1,14 +1,15 @@
 import React from 'react'
 import './sass/main.scss'
-import Board from './components/Board'
 import BoardNew from './components/BoardNew'
+import BoardNewNew from './components/BoardNewNew'
 
 function App() {
-	return (
-		<div className='container'>
-			<BoardNew />
-		</div>
-	)
+  return (
+    <div className='container'>
+      {/* <BoardNew /> */}
+      <BoardNewNew />
+    </div>
+  )
 }
 
 export default App
